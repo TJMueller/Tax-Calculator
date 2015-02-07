@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,11 +15,172 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="purple_bg" translatesAutoresizingMaskIntoConstraints="NO" id="pqH-9u-mFZ">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="-11" y="-7" width="417" height="612"/>
+                                </variation>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Result" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NKR-Hc-F62">
+                                <rect key="frame" x="255" y="123" width="90" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="4yi-EB-Gbh"/>
+                                    <constraint firstAttribute="width" constant="103" id="V1Z-2p-EKE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="4yi-EB-Gbh"/>
+                                        <exclude reference="V1Z-2p-EKE"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="4yi-EB-Gbh"/>
+                                        <include reference="V1Z-2p-EKE"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GUp-B9-Ydb">
+                                <rect key="frame" x="289" y="356" width="46" height="30"/>
+                                <state key="normal" title="Calculate">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Hia-xv-17d">
+                                <rect key="frame" x="243" y="244" width="123" height="29"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.31" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="123" id="YYr-d8-ukq"/>
+                                    <constraint firstAttribute="height" constant="28" id="xyh-jt-qi3"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="CA"/>
+                                    <segment title="CHI"/>
+                                    <segment title="NY"/>
+                                </segments>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="YYr-d8-ukq"/>
+                                        <exclude reference="xyh-jt-qi3"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="YYr-d8-ukq"/>
+                                        <include reference="xyh-jt-qi3"/>
+                                    </mask>
+                                </variation>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugn-Iw-Cct">
+                                <rect key="frame" x="260" y="309" width="80" height="30"/>
+                                <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="FFX-uC-JhP"/>
+                                    <constraint firstAttribute="width" constant="80" id="IkF-5G-IXB"/>
+                                </constraints>
+                                <state key="normal" title="Calculate">
+                                    <color key="titleColor" red="0.29803922772407532" green="0.29803922772407532" blue="0.29803922772407532" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="FFX-uC-JhP"/>
+                                        <exclude reference="IkF-5G-IXB"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="FFX-uC-JhP"/>
+                                        <include reference="IkF-5G-IXB"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="onCalculateButtonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="HfD-Rx-Z0S"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Enter Price" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lps-xX-2Es">
+                                <rect key="frame" x="252" y="173" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="113" id="U9F-cQ-2Dk"/>
+                                    <constraint firstAttribute="height" constant="40" id="hJw-iw-59E"/>
+                                </constraints>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="U9F-cQ-2Dk"/>
+                                        <exclude reference="hJw-iw-59E"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="U9F-cQ-2Dk"/>
+                                        <include reference="hJw-iw-59E"/>
+                                    </mask>
+                                </variation>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="NKR-Hc-F62" secondAttribute="centerX" id="Gb1-Zu-Iq2"/>
+                            <constraint firstItem="Hia-xv-17d" firstAttribute="top" secondItem="Lps-xX-2Es" secondAttribute="bottom" constant="30" id="JNM-dk-Gx7"/>
+                            <constraint firstItem="Lps-xX-2Es" firstAttribute="top" secondItem="NKR-Hc-F62" secondAttribute="bottom" constant="30" id="jbj-F3-dnG"/>
+                            <constraint firstAttribute="centerX" secondItem="Lps-xX-2Es" secondAttribute="centerX" id="kHS-LD-nHz"/>
+                            <constraint firstAttribute="centerX" secondItem="ugn-Iw-Cct" secondAttribute="centerX" id="mlK-qr-78H"/>
+                            <constraint firstAttribute="centerX" secondItem="Hia-xv-17d" secondAttribute="centerX" id="nzR-eF-sXy"/>
+                            <constraint firstItem="ugn-Iw-Cct" firstAttribute="top" secondItem="Hia-xv-17d" secondAttribute="bottom" constant="30" id="pz8-i4-R5T"/>
+                            <constraint firstAttribute="centerY" secondItem="ugn-Iw-Cct" secondAttribute="centerY" id="yHb-hk-kgE"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="pqH-9u-mFZ"/>
+                                <exclude reference="GUp-B9-Ydb"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="Gb1-Zu-Iq2"/>
+                                <exclude reference="jbj-F3-dnG"/>
+                                <exclude reference="kHS-LD-nHz"/>
+                                <exclude reference="JNM-dk-Gx7"/>
+                                <exclude reference="nzR-eF-sXy"/>
+                                <exclude reference="mlK-qr-78H"/>
+                                <exclude reference="pz8-i4-R5T"/>
+                                <exclude reference="yHb-hk-kgE"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="pqH-9u-mFZ"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="Gb1-Zu-Iq2"/>
+                                <include reference="jbj-F3-dnG"/>
+                                <include reference="kHS-LD-nHz"/>
+                                <include reference="JNM-dk-Gx7"/>
+                                <include reference="nzR-eF-sXy"/>
+                                <include reference="mlK-qr-78H"/>
+                                <include reference="pz8-i4-R5T"/>
+                                <include reference="yHb-hk-kgE"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="priceTextField" destination="Lps-xX-2Es" id="Dfg-Bj-Y9q"/>
+                        <outlet property="resultLabel" destination="NKR-Hc-F62" id="lO6-76-bRu"/>
+                        <outlet property="segmentedControl" destination="Hia-xv-17d" id="d3v-f7-e7K"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="579" y="391"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="purple_bg" width="160" height="284"/>
+    </resources>
 </document>
